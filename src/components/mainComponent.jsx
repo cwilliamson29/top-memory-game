@@ -20,7 +20,7 @@ export default function Main({ difArray, cardStyle, setCount, count, best, setBe
 		let cardReturn = data.filter((obj) => {
 			return obj.id === difArray[i];
 		});
-		CardDisplayArray.push(<Card key={cardReturn[0].id} id={cardReturn[0].id} name={cardReturn[0].name} sty={cardStyle} path={cardReturn[0].path} onClick={() => onClick(cardReturn[0].id)} />);
+		CardDisplayArray.push(<Card key={cardReturn[0].id} id={cardReturn[0].id} name={cardReturn[0].name} type={cardReturn[0].type} sty={cardStyle} path={cardReturn[0].path} onClick={() => onClick(cardReturn[0].id)} />);
 	}
 
 	return <div className="main">{CardDisplayArray}</div>;
